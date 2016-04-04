@@ -6,7 +6,7 @@ FROM ubuntu:15.10
 MAINTAINER Mike Christof <mhristof@gmail.com>
 
 RUN apt-get update &&\
-    apt-get install -y python-pip git python-dev silversearcher-ag upstart shellcheck &&\
+    apt-get install -y python-pip git python-dev silversearcher-ag upstart shellcheck wget &&\
     pip install ansible==1.9.4 flake8 &&\
     apt-get autoremove &&\
     apt-get autoclean
