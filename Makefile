@@ -4,7 +4,7 @@
 #
 
 NAME = mhristof/ansible-1.9.4
-# VERSION = 4
+# VERSION = 7
 
 default: build
 
