@@ -19,6 +19,8 @@ RUN apt-get install -y nodejs &&\
     npm install -g grunt-cli &&\
     apt-get autoremove &&\
     apt-get autoclean
+RUN curl https://storage.googleapis.com/git-repo-downloads/repo > /usr/bin/repo &&\
+    chmod a+x /usr/bin/repo
 #RUN apt-get install -y cabal-install &&\
     #cabal update &&\
     #cabal install shellcheck
