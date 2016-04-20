@@ -5,11 +5,14 @@
 FROM ubuntu:15.10
 MAINTAINER Mike Christof <mhristof@gmail.com>
 
+ARG ansible_version=1.9.4
 RUN apt-get update &&\
-    apt-get install -y python-pip git python-dev silversearcher-ag upstart shellcheck wget curl php5 &&\
-    pip install ansible==1.9.4 flake8 &&\
+    apt-get install -y gcc-4.9 python-pip libcurl4-openssl-dev zlib1g-dev git python-dev silversearcher-ag upstart shellcheck wget curl php5 &&\
+    pip install flake8 &&\
     apt-get autoremove &&\
     apt-get autoclean
+RUN pip install ansible==${ansible_version}
+RUN pip install sh
 RUN apt-get install -y nodejs &&\
     ln -s /usr/bin/nodejs /usr/bin/node &&\
     wget https://github.com/npm/npm/archive/v3.8.5.tar.gz -O /tmp/npm-3.8.5.tar.gz &&\
