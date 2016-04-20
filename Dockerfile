@@ -12,7 +12,7 @@ RUN apt-get update &&\
     apt-get autoremove &&\
     apt-get autoclean
 RUN pip install ansible==${ansible_version}
-RUN pip install sh
+RUN pip install sh netaddr
 RUN apt-get install -y nodejs &&\
     ln -s /usr/bin/nodejs /usr/bin/node &&\
     wget https://github.com/npm/npm/archive/v3.8.5.tar.gz -O /tmp/npm-3.8.5.tar.gz &&\
