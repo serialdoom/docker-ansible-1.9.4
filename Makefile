@@ -3,9 +3,9 @@
 # mhristof, 2016-03-31 13:55
 #
 
-ANSIBLE_VERSION = 1.9.4
+ANSIBLE_VERSION = 1.9.6
 NAME = mhristof/ansible-$(ANSIBLE_VERSION)
-# VERSION = 9.1
+VERSION = 0.1
 
 default: build
 
@@ -19,6 +19,12 @@ push:
 
 build:
 	docker build --build-arg ansible_version=$(ANSIBLE_VERSION) -t mhristof/ansible-$(ANSIBLE_VERSION) .
+
+test: test-ansible test-shellcheck test-flake8 test-pip test-mysql
+
+test-%:
+	docker run -P $(NAME) $* --version
+
 
 all:
 	@echo "Makefile needs your attention"
