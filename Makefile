@@ -5,7 +5,7 @@
 
 ANSIBLE_VERSION = 1.9.6
 NAME = mhristof/ansible-$(ANSIBLE_VERSION)
-VERSION = 0.1
+VERSION = 0.2
 
 default: build
 

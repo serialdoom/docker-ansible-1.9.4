@@ -7,7 +7,7 @@ MAINTAINER Mike Christof <mhristof@gmail.com>
 
 ARG ansible_version=1.9.6
 RUN apt-get update &&\
-    apt-get install -y gcc-4.9 python-pip libcurl4-openssl-dev zlib1g-dev git python-dev silversearcher-ag upstart wget curl php5 mysql-client cabal-install &&\
+    apt-get install -y gcc-4.9 python-pip libcurl4-openssl-dev zlib1g-dev git python-dev silversearcher-ag upstart wget curl php5 mysql-client cabal-install python-mysqldb &&\
     pip install flake8 &&\
     apt-get autoremove &&\
     apt-get autoclean
