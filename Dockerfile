@@ -7,7 +7,7 @@ MAINTAINER Mike Christof <mhristof@gmail.com>
 
 ARG ansible_version=1.9.6
 RUN apt-get update &&\
-    apt-get install -y libssl-dev libffi-dev python-pip libcurl4-openssl-dev git python-dev
+    apt-get install -y libssl-dev libffi-dev python-pip libcurl4-openssl-dev git mysql-client python-dev
 RUN pip install ansible==${ansible_version} && pip install --upgrade setuptools
 RUN apt-get clean &&\
         apt-get autoremove &&\
