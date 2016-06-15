@@ -3,9 +3,9 @@
 # mhristof, 2016-03-31 13:55
 #
 
-ANSIBLE_VERSION = 1.9.6
+ANSIBLE_VERSION = 2.1.0.0
 NAME = mhristof/ansible-$(ANSIBLE_VERSION)
-VERSION = 0.2
+VERSION = 0.2.2
 
 default: build
 
